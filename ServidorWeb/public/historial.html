@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <!------- INFORMACION DE LA PÁGINA ---------->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
+        <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
+        <meta name="author" content="Fernando Jácome">
+        <title> TFM | Historial</title>
+        <link rel="shortcut icon" href="/images/iot.png">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body id="cuerpo" onload="dibujar()">
+        <!------- Encabezado de la pagina WEB  ---------->
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1> <span class="highlight">  CONTROL Y MONITORIZACIÓN DE UN SISTEMA FISÍCO DESDE LA RED </span> </h1>
+                    <h2> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h2>
+                    <h3> SISTEMA DE CLASIFICACIÓN DE ENGRANAJES CON VISIÓN ARTIFICIAL </h3>
+                </div>
+                <nav>
+                    <ul>
+                        <li> <a href="inicio.html" > INICIO</a></li>
+                        <li > <a href="controlymoni.html" > CONTROL Y MONITORIZACIÓN</a></li>
+                        <!--  <li> <a href="controlmanual.html" >CONTROL MANUAL</a></li> -->
+                        <!--     <li> <a href="practicas.html" >DISPOSITIVO 2</a></li> -->
+                        <li class ="current"> <a href="historial.html" > HISTORIAL</a></li>
+                        <li> <a href="estadisticas.html" > ESTADISTICAS </a> </li>
+                        <li> <a href="docs.html"> DOCUMENTACIÓN</a></li>
+                        <!-- <li > <a href ="autoymanual.html"> AUTOMATICO Y MANUAL</a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!------- SECCION 1 LABORATORIO  ---------->
+        <section id="showcase2">
+            <div class ="container">
+                <h2 style="font-size-adjust: 25px">SECVIA</h2>
+                <h2>IMAGENES PROCESADA,ORIGINAL Y DETALLE </h2>
+            </div>
+        </section>
+        <section id="showcase2">
+            <div class ="container"  id="divtabla">
+                <table id="tablahistorial">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Procesada</th>
+                            <th>Original</th>
+                            <th>Detalles del Engranaje</th>
+                            <th>Fecha</th>
+                            <th>Observacion</th>
+                            <th>Latencia(ms)</th>
+                            <th>Tiempo procesamiento(ms)</th>
+                            <th>Procesador</th>
+                        </tr>
+                    </thead>
+                    <tbody>  </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!------- SECCION 3 CONTACTO INFORMACION ---------->
+        <section id="newsletter">
+
+        </section>
+        <!------- SECCION 4 ENLACES UNIVERSIDAD  ---------->
+        <section id="boxes">
+            <div class ="container_boxes">
+                <table id = "tablaenlaces" style=" width:95%">
+                    <tr>
+                        <th>
+                            <p> <a href="https://www.upc.edu/ca"> UPC </a> </p>
+                        </th>
+                        <th> 
+                            <a href="https://www.epsevg.upc.edu/ca">EPSEVG </a>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td> 
+                            <p>
+                                <a href="https://www.upc.edu/ca"> <br>
+                                    <img src="/images/Logo_UPC.png" style="width:25%" alt="UPC"> </a>
+                            </p>
+                        </td>
+                        <td> 
+                            <p>
+                                <a href="https://www.epsevg.upc.edu/ca">
+                                    <img src="/images/Logo_epsevg.png" style="width:25%" alt="EPSEVG "> </a>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr> 
+                        <td> 
+                            <p> Universidad Politècnica de Cataluña </p>
+                        </td>
+                        <td>
+                            <p> Escuela Politécnica Superior de Ingenieria de Vilanova y Geltrú</p>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!------- PIE DE PAGINA  ------------> 
+        <footer>
+            <p> Escuela Politécnica Superior de Ingeniería de Vilanova i la Geltrú. EPSEVG Av. Víctor Balaguer &copy; 08800 Vilanova i la Geltrú - Tel.: 93 896 77 01 / 93 896 77 02 </p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="javascripts/historial.js"></script>
+
+
+    </body>
+
+</html>

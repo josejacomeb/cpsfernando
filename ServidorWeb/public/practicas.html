@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <!--INFORMACION DE LA PÁGINA -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
+        <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
+        <meta name="author" content="Fernando Jácome">
+        <title> TFM | CONTROL Y MONITORIZACIÓNA</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="shortcut icon" href="/images/iot.png">
+    </head>
+    <body>
+        <!-- Encabezado de la pagina WEB -->
+        <header> 
+            <div class="container">
+                <div id="branding">
+                    <h1> <span class="highlight">  ESCUELA POLITÉCNICA DE CATALUÑA </span> </h1>
+                    <h2> TRABAJO FINAL DE MÁSTER</h2>
+                    <h3> DESARROLLO E INTEGRACIÓN DE UN SISTEMA CIBER-FISICO APLICADO AL CONTROL DE CALIDAD UTILIZANDO VISIÓN ARTIFICIAL</h3>
+                </div>
+                <nav>
+                    <ul>
+                         <li> <a href="inicio.html" > INICIO</a></li>
+                        <li > <a href="controlymoni.html" > CONTROL Y MONITORIZACIÓN AUTOMATICO</a></li>
+                    <!--     <li> <a href="controlmanual.html" >CONTROL MANUAL</a></li>-->
+                          <li  class ="current"> <a href="practicas.html" >DISPOSITIVO 2</a></li>
+                        <li > <a href="historial.html" > HISTORIAL</a></li>
+                        <li> <a href="estadisticas.html" > ESTADISTICAS </a> </li>
+                        <li> <a href="docs.html"> DOCUMENTACIÓN</a></li>
+                          <!-- <li > <a href ="autoymanual.html"> AUTOMATICO Y MANUAL</a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--SECCION 1 LABORATORIO-->
+        <section id="showcase2">
+            <div class ="container">
+                <h2>LABORATORIO DE SENSORES Y MEMS</h2>
+            </div>
+        </section>
+        <!-- SECCION 2 COMANDOS DE CONTROL -->
+
+        <section id="ejercicio">  
+            <div class="container">
+                <div class="ejemplo1">
+                    <table id ="tablapulsador" style =" width:100%">
+                        <tr> 
+                            <th>COMANDO</th>
+                            <th>ESTADO</th>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div>
+                                    <button id="ledon"> <strong>LED ENCENDIDO</strong> </button>
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="square" id="ledcolor"></div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div>
+                                    <button id="ledoff"> <strong>LED APAGADO</strong> </button>
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="square" id="ledcolor2"></div> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!--SECCION 3 CONTACTO INFORMACION-->
+        <section id="newsletter">
+            <div class ="container">
+                <p> Contactos </p>
+                <form>
+                    <input type="email" placeholder="ferisdra@hotmail.com">
+                    <button> ENVIAR</button>
+                </form>
+            </div>
+        </section>
+
+        <!--SECCION 4 ENLACES UNIVERSIDAD-->
+<section id="boxes">
+            <div class ="container_boxes">
+                <table id = "tablaenlaces" style=" width:95%">
+                    <tr>
+                        <th>
+                            <p> <a href="https://www.upc.edu/ca"> UPC </a> </p>
+                        </th>
+                        <th> 
+                            <a href="https://www.epsevg.upc.edu/ca">EPSEVG </a>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td> 
+                            <p>
+                                <a href="https://www.upc.edu/ca"> <br>
+                                    <img src="/images/Logo_UPC.png" style="width:25%" alt="UPC"> </a>
+                            </p>
+                        </td>
+                        <td> 
+                            <p>
+                                <a href="https://www.epsevg.upc.edu/ca">
+                                    <img src="/images/EPSEVG.jpg" style="width:25%" alt="EPSEVG "> </a>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr> 
+                        <td> 
+                            <p> Universidad Politècnica de Cataluña </p>
+                        </td>
+                        <td>
+                            <p> Escuela Politécnica Superior de Ingenieria de Vilanova y Geltrú</p>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!--PIE DE PAGINA -->
+        <footer>
+            <p> Escuela Politécnica Superior de Ingeniería de Vilanova i la Geltrú. EPSEVG Av. Víctor Balaguer &copy; 08800 Vilanova i la Gría de Vilaneltrú - Tel.: 93 896 77 01 / 93 896 77 02 </p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/ejercicios.js"></script>           
+    </body>    
+</html>

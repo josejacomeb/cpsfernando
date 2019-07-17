@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--INFORMACION DE LA PÁGINA -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
+        <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
+        <meta name="author" content="Fernando Jácome">
+        <title> TFM | CONTROL Y MONITORIZACIÓNA</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="shortcut icon" href="/images/iot.png">
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+            .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+            .fa-anchor,.fa-coffee {font-size:200px}
+        </style>
+    </head>
+    <body>
+        <!-- Encabezado de la pagina WEB -->
+        <header> 
+            <div class="container">
+                <div id="branding">
+                    <h1> <span class="highlight">  CONTROL Y MONITORIZACIÓN DE UN SISTEMA FISÍCO DESDE LA RED </span> </h1>
+                    <h2> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h2>
+                    <h3> SELECTION GEAR WITH ARTICIAL VISION</h3>
+                </div>
+                <nav>
+                    <ul>
+                        <li> <a href="inicio.html" > INICIO</a></li>
+                        <li  > <a href="controlymoni.html" > CONTROL Y MONITORIZACIÓN AUTOMATICO</a></li>
+                        <!--  <li> <a href="controlmanual.html" >CONTROL MANUAL</a></li> -->
+                        <li > <a href="practicas.html" >DISPOSITIVO 2</a></li>
+                        <li > <a href="historial.html" > HISTORIAL</a></li>
+                        <li> <a href="estadisticas.html" > ESTADISTICAS </a> </li>
+                        <li > <a href="docs.html"> DOCUMENTACIÓN</a></li>
+                        <!--   <li class ="current" > <a href="autoymanual.html"> CONTROL Y MONITORIZACIÓN AUTOMATICO</a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--SECCION 1 LABORATORIO-->
+        <section id="showcase2">
+            <div class ="container" style="font-size: 13px">
+                <h2>LABORATORIO DE SENSORES Y MEMS</h2>
+            </div>
+        </section>
+        <!-- SECCION 2 COMANDOS DE CONTROL -->
+        <section id="controles">
+            <div class="container_monitorizacion" id="auto"> 
+                <div class ="comandos">
+                    <table id = "tablacomandos" style=" width:80%">
+                        <tr>
+                            <td COLSPAN=2>
+                                <div>
+                                    <button id="automatico"> <strong>AUTOMATICO</strong> </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>COMANDOS</th>
+                            <th>ESTADO</th>
+                            <th>OBSERVACION</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <button id="start"> <strong>ARRANQUE DEL SISTEMA</strong> </button>
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="square2" id="startcolor"></div> 
+                            </td>
+
+                            <td>
+                                <p id="textstart" style="display:none"> SISTEMA EN FUNCIONAMIENTO </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id ="stop"> <strong>PARO DEL SISTEMA</strong> </button>
+                            </td>
+                            <td> 
+                                <div class="square" id="stopcolor"></div> 
+                            </td>
+                            <td>
+                                <p id="textstop" style="display:none"> SISTEMA EN STANBY!!!!!! </p> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <h5  id ="botonemergencia">EMERGENCIA </h5> 
+                            </td>
+                            <td>
+                                <input id="emergencia" type="checkbox" value="0"  > <div class="square2" id="emergenciacolor"></div>
+                            </td>
+                            <td>
+                                <p id="textemergencia" style="display:none"> RETIRAR EMERGENCIA!!!!!! </p> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td COLSPAN=2> <form>
+                                    VELOCIDAD DE MOTOR
+                                    <input id="motor" type="range" name="slidermotor" min="0" max="125" value="0">  
+                                </form>  
+                            </td>
+                            <td> 
+                                <p> VELOCIDAD DEL MOTOR </p>
+                                <label id="motorvalor" style="font-size:15px" style="text-align: center" style="color: #000000"> </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <strong>SENSOR DE PRESENCIA</strong> 
+                            </td>
+                            <td> 
+                                <div class="square2" id="valorpresencia"></div>
+                            </td>
+                            <td>
+                                <p id="textconobjeto" style="display:none"> PRESENCIA DE ENGRANAJE </p> 
+                                <p id="textsinobjeto" style="display:none"> VACIO!!!! </p> 
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <strong>CLASIFICADOR</strong>
+                            </td>
+                            <td>
+                                <div class="square" id="estadoclasifi"></div>
+                            </td>
+                            <td>
+                                <p id="textobjetobueno" style="display:none"> ENGRANE BUENO </p>
+                                <p id="textobjetomalo" style="display:none"> ENGRANE MALO </p>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div class="comandos">
+                    <strong>IMAGEN PROCESADA</strong><br>
+                    <img src="/images/EPSEVG.jpg"  style="width:40%" id="imagen_actual" alt="Salida de imagen"> 
+                    <label id="detalleengrane"> </label>
+                    <button onclick="window.location.href = 'historial.html'"> VER DETALLES </button> 
+                </div>  
+            </div>          
+        </section>
+
+        <!--SECCION 3 CONTACTO INFORMACION-->
+        <section id="newsletter">
+            <div class ="container">
+                <p> Contactos </p>
+                <form>
+                    <input type="email" placeholder="ferisdra@hotmail.com">
+                    <button> ENVIAR</button>
+                </form>
+            </div>
+        </section>
+
+        <!--SECCION 4 ENLACES UNIVERSIDAD-->
+        <section id="boxes">
+            <div class ="container_boxes">
+                <table id = "tablaenlaces" style=" width:95%">
+                    <tr>
+                        <th>
+                            <p> <a href="https://www.upc.edu/ca"> UPC </a> </p>
+                        </th>
+                        <th> 
+                            <a href="https://www.epsevg.upc.edu/ca">EPSEVG </a>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td> 
+                            <p>
+                                <a href="https://www.upc.edu/ca"> <br>
+                                    <img src="/images/Logo_UPC.png" style="width:25%" alt="UPC"> </a>
+                            </p>
+                        </td>
+                        <td> 
+                            <p>
+                                <a href="https://www.epsevg.upc.edu/ca">
+                                    <img src="/images/EPSEVG.jpg" style="width:25%" alt="EPSEVG "> </a>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr> 
+                        <td> 
+                            <p> Universidad Politècnica de Cataluña </p>
+                        </td>
+                        <td>
+                            <p> Escuela Politécnica Superior de Ingenieria de Vilanova y Geltrú</p>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!--PIE DE PAGINA -->
+        <footer>
+            <p> Escuela Politécnica Superior de Ingeniería de Vilanova i la Geltrú. EPSEVG Av. Víctor Balaguer &copy; 08800 Vilanova i la Gría de Vilaneltrú - Tel.: 93 896 77 01 / 93 896 77 02 </p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/socket.js"></script>           
+    </body>    
+</html>

@@ -1,0 +1,14 @@
+[Unit]
+Description=Servicio para iniciar el programa que maneja la banda
+After=graphical.target
+Requires=servidorweb.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/Documents/UPC_TFM_Fernando_Jacome/ClienteSocket/dist/Debug/GNU-Linux/clientesocket
+StandardOutput=inherit
+StandardError=inherit
+User=root
+
+[Install]
+WantedBy=multi-user.target 

@@ -1,0 +1,12 @@
+[Unit]
+Description=Servicio para iniciar el programa que maneja la banda
+After=servidorweb.service
+
+[Service]
+ExecStart=/home/pi/Documents/UPC_TFM_Fernando_Jacome/ClienteSocket/dist/Debug/GNU-Linux/clientesocket
+
+RemainAfterExit=true
+User=pi
+
+[Install]
+WantedBy=multi-user.target 

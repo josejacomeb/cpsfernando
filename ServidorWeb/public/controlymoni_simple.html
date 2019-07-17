@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <!--INFORMACION DE LA PÁGINA -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
+        <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
+        <meta name="author" content="Fernando Jácome">
+        <title> SECVIA | CONTROL Y MONITORIZACIÓN</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="shortcut icon" href="/images/iot.png">
+    </head>
+    <body>
+        <!-- Encabezado de la pagina WEB -->
+        <header> 
+            <div class="container">
+                <div id="branding">
+                    <h1> <span class="highlight">  CONTROL Y MONITORIZACIÓN DE UN SISTEMA FISÍCO DESDE LA RED </span> </h1>
+                    <h2> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h2>
+                    <h3> SISTEMA DE CLASIFICACIÓN DE ENGRANAJES CON VISIÓN ARTIFICIAL </h3>
+                </div>
+                <nav>
+                    <ul>
+                        <li> <a href="inicio.html" > INICIO</a></li>
+                        <li class ="current" > <a href="controlymoni.html" > CONTROL Y MONITORIZACIÓN </a></li>
+                        <!-- <li > <a href="practicas.html" >DISPOSITIVO 2</a></li> -->
+                        <li > <a href="historial.html" > HISTORIAL</a></li>
+                        <li> <a href="estadisticas.html" > ESTADISTICAS </a> </li>
+                        <li> <a href="docs.html"> DOCUMENTACIÓN</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--SECCION 1 LABORATORIO-->
+        <section id="showcase2">
+            <div class ="container" style="font-size: 13px">
+                <h2 style="font-size-adjust: 25px">SECVIA</h2>
+            </div>
+        </section>
+       
+	 <!-- SECCION 2 COMANDOS DE CALIBRACION -->
+<!--
+	<section id ="showcase2" style="background-color:  #268982" style="margin-left: 20px" style="margin-right: 20px">
+            <table id="tablacomandos"style="width:80%">
+                <tr>
+                    <td colspan="1">
+                        <h2>CALIBRACION DE SENSOR DE POSICIÓN</h2>  
+                    </td> 
+                    <td>
+                        <h2>ESTADO SENSOR</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:  #268982"> 
+                        <div class ="container" style="font-weight: bold" style="font-size-adjust: 10px">
+                            <form>
+                                <p>  Valor de Umbral </p>
+                                <input id="umbral" type="range" name="sliderumbral" min="10" max="800" value="20">  
+                            </form>  
+                            <label id="umbralvalor" style="font-size: 15px" style="text-align: center" style="color: #000000"> </label>
+                            <p id="datocalibrar" style="display:none" > CALIBRADO </p> 
+                        </div>
+                    </td>
+                     <td style="background-color:  #268982"> 
+                                <div class="square2" id="valorpresenciamanual"></div>
+                            </td>
+                </tr>
+            </table>
+        </section>
+-->
+        <!-- SECCION 2 COMANDOS DE CONTROL -->
+        <section id="controles">
+            <div class="container_monitorizacion" id="auto"> 
+                <div class ="comandos">
+                    <table id = "tablacomandos" style=" width:80%">
+                        <tr>
+                            <td COLSPAN=2>
+                                <div>
+                                    <button id="automatico" > <strong>AUTOMATICO</strong> </button>
+                                </div>
+                            </td>
+                            <!-- INICIO PARTE MANUAL-->
+                          
+			 <td COLSPAN=2>
+                                <div >
+                                    <button id="manual"> <strong> SISTEMA MANUAL</strong> </button>
+                                </div>
+                            </td> 
+ -->                   	  <!-- FIN PARTE MANUAL-->
+                
+		        </tr>
+                        <tr>
+                            <th>COMANDOS</th>
+                            <th>ESTADO</th>
+ <!--                           <th>COMANDOS</th>    -->
+                            <th>OBSERVACION</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <button id="start"> <strong>ARRANQUE DEL SISTEMA</strong> </button>
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="square2" id="startcolor"></div> 
+                            </td>
+                            <!-- INICIO PARTE MANUAL-->
+<!--
+                           <td>    
+                                <button id="motoradelante" value="0"> <strong>MOTOR ADELANTE</strong> </button>
+                            </td>
+-->
+                         <!-- FIN PARTE MANUAL-->
+                           
+			   <td>
+                                <p id="textstart" style="display:none"> SISTEMA EN FUNCIONAMIENTO </p>
+                                <p id="motoradelantelabel" style="display:none"> MOTOR HACIA ADELANTE </p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id ="stop"> <strong>PARO DEL SISTEMA</strong> </button>
+                            </td>
+                            <td> 
+                                <div class="square" id="stopcolor"></div> 
+                            </td>
+
+                            <!-- INICIO PARTE MANUAL-->
+<!--
+                           <td>    
+                                <button id="motoratras" > <strong>MOTOR ATRAS</strong> </button>
+                            </td> 
+
+                          <!-- FIN PARTE MANUAL-->
+-->
+                            <td>
+                                <p id="textstop" style="display:none"> SISTEMA EN STANBY!!!!!! </p> 
+                                <p id="motoratraslabel" style="display:none"> MOTOR HACIA ATRAS </p> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <h5  id ="botonemergencia">EMERGENCIA </h5> 
+                            </td>
+                            <td>
+                                <input id="emergencia" type="checkbox" value="0"  > <div class="square2" id="emergenciacolor"></div>
+                            </td>
+
+                            <!-- INICIO PARTE MANUAL-->
+<!--
+                           <td>    
+                                <button id="capturarengrane"> <strong> PROCESAR ENGRANE</strong> </button>
+                            </td>
+-->
+                         <!-- FIN PARTE MANUAL-->
+
+                            <td>
+                                <p id="textemergencia" style="display:none"> RETIRAR EMERGENCIA!!!!!! </p> 
+                                <p id="textcapturarengrane" style="display:none"> ENGRANE CAPTURADO Y PROCESADO </p> 
+
+                            </td>
+                        </tr>
+                        <tr>
+                           <td COLSPAN=4> <form>
+                                    VELOCIDAD DE MOTOR
+                                    <input id="motor" type="range" name="slidermotor" min="0" max="100" value="0">  
+                                <label id="motorvalor" style="font-size:15px" style="text-align: center" style="color: #000000"> </label>
+                     			</form>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <strong>SENSOR DE PRESENCIA</strong> 
+                            </td>
+                            <td> 
+                                <div class="square2" id="valorpresencia"></div>
+                            </td>
+
+                            <!-- INICIO PARTE MANUAL-->
+<!--
+                           <td>    
+                                <button id="clasificacionbueno"> <strong>CLASIFICADOR BUENO</strong> </button>
+                            </td>
+-->
+                         <!-- FIN PARTE MANUAL-->
+
+                            <td>
+                                <p id="textconobjeto" style="display:none"> PRESENCIA DE ENGRANAJE </p> 
+                                <p id="textsinobjeto" style="display:none"> VACIO!!!! </p> 
+                                <p id="engranebueno" style="display:none"> ENGRANE BUENO!!!! </p> 
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <strong>CLASIFICADOR</strong>
+                            </td>
+                            <td>
+                                <div class="square" id="estadoclasifi"></div>
+                            </td>
+
+                            <!-- INICIO PARTE MANUAL-->
+<!--
+                            <td>    
+                                <button id="clasificacionmalo"> <strong>CLASIFICADOR MALO</strong> </button>
+                            </td> 
+-->
+                            <!-- FIN PARTE MANUAL-->
+
+                            <td>
+                                <p id="textobjetobueno" style="display:none"> ENGRANE BUENO </p>
+                                <p id="textobjetomalo" style="display:none"> ENGRANE MALO </p>
+                                <p id="engranemalo" style="display:none"> ENGRANE MALO!!!! </p> 
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div class="comandos">
+                    <strong>IMAGEN PROCESADA</strong><br>
+                    <img src="/images/EPSEVG.jpg"  style="width:40%" id="imagen_actual" alt="Salida de imagen"> 
+                    <label id="detalleengrane"> </label>
+                    <button onclick="window.location.href = 'historial.html'"> VER DETALLES </button> 
+                </div>  
+            </div>          
+        </section>
+
+
+
+        <!--SECCION 4 ENLACES UNIVERSIDAD-->
+        <section id="boxes">
+            <div class ="container_boxes">
+                <table id = "tablaenlaces" style=" width:95%">
+                    <tr>
+                        <th>
+                            <p> <a href="https://www.upc.edu/ca"> UPC </a> </p>
+                        </th>
+                        <th> 
+                            <a href="https://www.epsevg.upc.edu/ca">EPSEVG </a>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td> 
+                            <p>
+                                <a href="https://www.upc.edu/ca"> <br>
+                                    <img src="/images/Logo_UPC.png" style="width:25%" alt="UPC"> </a>
+                            </p>
+                        </td>
+                        <td> 
+                            <p>
+                                <a href="https://www.epsevg.upc.edu/ca">
+                                    <img src="/images/Logo_epsevg.png" style="width:25%" alt="EPSEVG "> </a>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr> 
+                        <td> 
+                            <p> Universidad Politécnica de Cataluña </p>
+                        </td>
+                        <td>
+                            <p> Escuela Politécnica Superior de Ingenieria de Vilanova y Geltrú</p>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!--PIE DE PAGINA -->
+        <footer style="font-size-adjust: 10px">
+            <p> Escuela Politécnica Superior de Ingeniería de Vilanova i la Geltrú. EPSEVG Av. Víctor Balaguer &copy; 08800 Vilanova i la Geltrú - Tel.: 93 896 77 01 / 93 896 77 02 </p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/main_simple.js"></script>           
+    </body>    
+</html>

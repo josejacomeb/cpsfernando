@@ -1,0 +1,471 @@
+/* FORMATO GENERAL*/
+/*showcase*/
+
+
+
+
+
+
+/* --------------------------FORMATO GENERAL--------------------------------*/
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 2px;
+    background-color: #f4f4f4;/*gris*/
+}
+
+.container{ width: 90%;
+            margin:auto;
+            overflow: hidden;
+            position: relative;
+            margin-left: 20px;
+            margin-right: 20px;
+}
+
+/*hearder*/
+header{
+    background: #35424a;/*azul oscuro*/
+    color: #ffffff;
+    padding-top: 10px;
+    min-height: 1px;
+    border-bottom: #e8491d 10px solid;/*tomate*/
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+header li{
+    color: #ffffff;
+    float: left;
+    display: inline;
+    padding: 0 30px 0 10px;
+}
+
+header #branding{
+    /*float:left;*/
+    margin: auto;
+}
+header #branding .h1{
+    margin: 0;
+}
+header #branding .h3{
+    margin: auto;
+    font-size: 15px;
+}
+header #enlaces .nav {
+    /* float: right;*/
+    margin-top: 10px;
+    font-size : 20px;
+    color: #ffffff;
+}
+
+header .highlight {
+    color: #e8491d;
+    font-weight:bold;
+    font-size: 20px;
+    margin-left: 0;
+    border: 0;
+}
+
+header .current a {
+    color: #e8491d; /*tomate*/
+    font-weight:bold;
+    font-size: 15px;
+    margin-left: 0;
+    border: 0;
+}
+header .li{
+    font-size: 15px;
+    color: #ffffff;
+
+}
+
+header a:hover{
+    color: #929292;
+    font-weight:bold;
+}
+#tablahistorial {
+    font:20px/1.5 Arial;
+    border-collapse: collapse;
+    width: 100%;
+}
+#tablacomandos {
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+}
+.container_monitorizacion{ 
+    width: 90%;
+    margin:auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
+}
+
+#tablacomandos th, td {
+    text-align: center;
+    padding: 8px;
+    font:12px/1 Arial;
+    margin: auto;
+    min-height: 100px;
+}
+
+#tablacomandos tr:nth-child(even){
+    background-color:  #35424a;/*azul oscuro*/
+    color: #ffffff;     /*blanco*/
+    /*width: 20%;*/
+    max-width: 20px;
+    max-width: 80px;
+}
+
+#tablacomandos th {
+    background-color: #ffffff;/*blanco*/
+    color: #000000;
+    border: 1px solid black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*newsletter*/
+#newsletter {
+    font:10px/1.5 Arial;
+    padding: 10px;
+    color: #ffffff; /*blanco*/
+    background: #35424a;/*azul oscuro*/
+}
+
+#newsletter h1{
+    float: left;
+    font: 30px/1.5 Arial;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 150px;
+}
+
+/*Boxes*/
+boxes{
+    margin: auto;
+    min-height: 80px;
+}
+#boxes .container_boxes{
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+
+
+}
+
+/* cambio el tamaño de los iconos*/
+#boxes img{
+    width: 50px;
+}
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #a8491d;
+    text-align: center;
+    margin: auto;
+}
+#tablaenlaces {
+    max-height: 300px;      
+    position: relative;
+    margin: auto;
+    font-size: 15px
+}
+#tablaenlaces th {
+    font-size: 15px;
+    align-content: center;
+    width: 150px;
+}
+#tablaenlaces td {
+    font-size: 13px;
+    max-height: 50px;
+    align-content: center;
+}
+#tablaenlaces tr {
+    max-height: 20px;
+}
+/* --------------------------------------------INICIO---------------------------------*/
+
+#showcase{
+    width: 100%;
+    min-width: 200px;
+    min-height: 800px;
+    text-align: center;
+    font-size: 30px;
+    color:#e8491d;/*tomate*/
+}
+#showcase h2{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+#showcase p{
+    max-width: 300px;
+    max-height: 900px;
+    margin-left: 860px;
+    font-size:16px;
+    text-align: justify;
+    color:#000000;/*negro*/
+}
+.contenidoinicio{
+    font-size: 20px;
+    margin-left: 30px;
+    text-align: justify;
+
+    margin-right: 30px;
+}
+.sliderimagen { 
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+
+.imag {
+    vertical-align: middle;
+}
+.myslides { display: none;}
+.active {
+    background-color: #717171;/*gris oscuro*/
+}
+/* Caption text */
+.text{
+    color: #000000; /*negro*/
+    font-size: 18px;
+    padding: 8px 12px;
+  // position: absolute;
+ //   bottom: 8px;
+    width: 110%;
+    text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color:  #979290;/*gris*/
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 50px;
+    text-align: center;
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color:  #fffff8;/*blanco*/
+        border-radius: 100%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    /* Fading animation */
+    .fade{
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1s;
+        animation-name: fade;
+        animation-duration: 2s;
+    }
+
+}
+
+/*-------------------------------- CONTROL Y MONITORIZACIÓN---------------------------*/
+input[type="range"]
+{
+    width:80%;
+}
+#controles h6{
+    font-size: 14px;
+    margin: auto;
+}
+
+#controles h5{
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    color: #f60000;
+}
+#detalleengrane{
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    text-align: center;
+}
+
+label
+{
+    display:block;
+    padding:0;
+    margin:0 0 0.2em 0;
+    text-align:center;
+    font-weight:bold;
+    /*color:#5c5c5c;/*gris*/
+}
+motorvalor
+{
+    font-weight:normal;
+    font-style:italic;
+}
+.button{
+    height: 60px;
+    background-color: #ffffff;/*blaco*/
+    border: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: overline;
+    font-size: 160px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#controles{
+    margin-top: 10px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: auto;   
+}
+
+#controles .comandos{
+    text-align: center;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+}
+/* cambio el tamaño de los iconos*/
+#controles .comandos img{
+    width: 200px;
+}
+#showcase2 {
+    width: 100%;
+    min-width: 50px;
+    min-height: 12px;
+    background-color:#ffffff;
+    text-align: center;
+    font-size: 10px;
+    color:#000000;/*tomate*/
+
+}
+.square{
+    width: 40px;
+    height: 30px;
+    margin: auto;
+}
+.square2{
+    margin: auto;
+    width: 40px;
+    height: 30px;
+}
+/*----------------------------------HISTORIAL----------------------------------------*/
+#tablahistorial {
+    border: 1px solid black;
+    position: relative;
+    margin:auto;
+    max-width: 700px;
+    align-content:center
+}
+
+
+#tablahistorial th, td {
+  /*text-align: justify;*/
+    padding: 8px;
+    font:9px/1 Arial;
+    margin: auto;
+}
+
+#tablahistorial tr:nth-child(even){
+    background-color:  #35424a;/*azul oscuro*/
+    color: #ffffff;     /*blanco*/
+    /*width: 20%;*/
+    max-width: 15px;
+    max-width: 80px;
+}
+
+#tablahistorial th {
+    background-color: #ffffff;/*blanco*/
+    color: #000000;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: bold;
+}
+/*--------------------------------------DOCS----------------------------------------*/
+#showcase2 .pdf {
+    min-width: 200px;
+    min-height: 500px;
+    text-align: center;
+    font-size: 10px;
+    color:#000000;
+    width: 75%;
+    margin: auto;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+}
+#showcase2 .h1{
+    font-size: 10px;
+    color:#000000;/*tomate*/
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+.container_doc{ 
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+/*--------------------------------------INDEX----------------------------------------*/
+#INGRESO {
+    margin:auto;
+       width: 90%;
+    max-width: 100px;
+    min-height: 100px;
+    background-color: #f4f4f4; /*blanco*/
+    text-align: center;
+    color:#000000;/*negro*/
+    table-layout: 20px;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.h1i {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color:#e1970f; /*amarillo*/
+}
+
+.h2i {
+    font-size: 10 px;
+    text-align: left;
+    color:#000000;
+    background-color: #e1e5fd; /*celeste*/
+}
+
+#INGRESO .tri {
+    margin: auto;   
+    font-size: 10px;
+    text-align: center;
+    color:#000000;
+    background-color: #e1e5fd;/*celeste*/
+} 
+#INGRESO .table{
+    margin: auto;
+}

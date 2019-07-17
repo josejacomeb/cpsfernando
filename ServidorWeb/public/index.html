@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <!------- INFORMACION DE LA PÁGINA ---------->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
+        <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
+        <meta name="author" content="Fernando Jácome">
+        <title> SECVIA | INGRESO DE USUARIOS </title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+         <link rel="shortcut icon" href="/images/iot.png">
+    </head>
+    <body id="cuerpo">
+        <!------- Encabezado de la pagina WEB  ---------->
+        <header> 
+            <div class="container">
+               <div id="branding">
+                   <h1> <span class="highlight">  CONTROL Y MONITORIZACIÓN DE UN SISTEMA FISÍCO DESDE LA RED </span> </h1>
+                    <h2> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h2>
+                    <h3> SISTEMA DE CLASIFICACIÓN DE ENGRANAJES CON VISIÓN ARTIFICIAL </h3>
+                                 </div>
+                <nav>
+                </nav>
+            </div>
+        </header>
+        <!------- SECCION 2 USUARIO Y PASSWORD ---------->
+        <section id="INGRESO" style="max-width: 400px" style="margin-left: 10px" style="text-align: center">
+                           <h2 style="font-size-adjust: 25px">SECVIA</h2>
+            <p>Ingresa Tus Datos<p> 
+            <form name="login"> 
+                <table> 
+                    <tri> 
+                       <!---- <thi scope="row"></thi> --->
+                        <td><span class="cnt"> 
+                                <input name="usuario" type="text"  placeholder = "&#128106; Usuario" class="Input" value="" size="10" /> 
+                            </span></td> 
+                    </tri> 
+                    <tri> 
+                     <!---   <thi height="10" scope="row"></thi> --->
+                        <td><span class="cnt"> 
+                                <input name="password" type="password" placeholder = "&#128272; Contraseña" class="Input" value="" size="10" id="contraseña" /> 
+                            </span></td> 
+                        <td><span class="cnt"> 
+                                <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> 
+                                <input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" />
+                            </span></td> 
+                    </tri> 
+                 
+                </table> 
+            </form>
+
+
+
+        </section>
+        <!------- SECCION 3 CONTACTO INFORMACION ---------->
+        <section id="newsletter">
+            
+        </section>
+
+        <!------- SECCION 4 ENLACES UNIVERSIDAD  ---------->
+        <section id="boxes">
+            <div class ="container_boxes">
+                <table id = "tablaenlaces" style=" width:95%">
+                    <tr>
+                        <th>
+                            <p> <a href="https://www.upc.edu/ca"> UPC </a> </p>
+                        </th>
+                        <th> 
+                            <a href="https://www.epsevg.upc.edu/ca">EPSEVG </a>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td> 
+                            <p>
+                                <a href="https://www.upc.edu/ca"> <br>
+                                    <img src="/images/Logo_UPC.png" style="width:25%" alt="UPC"> </a>
+                            </p>
+                        </td>
+                        <td> 
+                           <p>
+                                <a href="https://www.epsevg.upc.edu/ca">
+                                    <img src="/images/Logo_epsevg.png" style="width:25%" alt="EPSEVG "> </a>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr> 
+                        <td> 
+                            <p> Universidad Politècnica de Cataluña </p>
+                        </td>
+                        <td>
+                            <p> Escuela Politécnica Superior de Ingenieria de Vilanova y Geltrú</p>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!------- PIE DE PAGINA  ----------> 
+        <footer>
+            <p> Escuela Politécnica Superior de Ingeniería de Vilanova i la Geltrú. EPSEVG Av. Víctor Balaguer &copy; 08800 Vilanova i la Geltrú - Tel.: 93 896 77 01 / 93 896 77 02 </p>
+        </footer>
+        <script src="javascripts/login.js"></script>
+    </body>
+</html>

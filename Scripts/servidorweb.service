@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio para iniciar el Servidor Web en HTML
+After=network.target
+
+[Service]
+Type=simple
+StandardOutput=inherit
+StandardError=inherit
+ExecStart=/home/pi/Documents/UPC_TFM_Fernando_Jacome/ServidorWeb/bin/www
+User=pi
+
+[Install]
+WantedBy=multi-user.target 
