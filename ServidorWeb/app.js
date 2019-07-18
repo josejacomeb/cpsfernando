@@ -15,6 +15,8 @@ var numeroimagenes = 0;
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+const {exec} = require('child_process'); //Ejecutar archivos
+
 var imagenes = {//Donde guardar las imagenes
     nombre: "",
     nombreprocesada: "",
@@ -138,6 +140,18 @@ fs.readFile(__dirname + '/public/images/imagenes.json', 'utf8', function (err, d
 io.on('connection', function (socket) {
     numeroconectados += 1;
     console.log("<<Usuario conectado>> Usuarios en linea: " + numeroconectados);
+    var handshakeua = socket.handshake.headers['user-agent'];
+    if (handshakeua.search("WebSocket") < 0) {
+        exec('./../ClienteSocketPruebasPaper/dist/Release/GNU-Linux/clientesocketpruebaspaper --n 20', (error, stdout, stderr) => {
+            if (error) {
+                console.error(`exec error: ${error}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+            console.log(`stderr: ${stderr}`);
+        });
+    }
+
     if (dispositivo.motor != null) {
         dispositivo.motor = valormotorservidor;
     }

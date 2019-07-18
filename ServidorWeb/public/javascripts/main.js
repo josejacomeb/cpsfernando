@@ -786,7 +786,7 @@ socket.on('latenciaentrada', function (data) {
     jsonfechaentrada.fechacliente = dato.fechacliente;
     jsonfechaentrada.fechaservidor = dato.fechaservidor;
     jsonfechaentrada.latencia = dato.latencia;
-    fechassalida.push(jsonfechaentrada);
+    fechasentrada.push(jsonfechaentrada);
 });
 socket.on('latenciasalida', function (data) {
     var dato = JSON.parse(data);

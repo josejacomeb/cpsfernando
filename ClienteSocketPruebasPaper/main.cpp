@@ -96,32 +96,6 @@ public:
 
 socket::ptr current_socket; //Api de socket, el Socket que maneja todos los eventos de Socket.io
 
-void eventos() {
-    current_socket->on("datos", sio::socket::event_listener_aux([&](string
-            const& name, message::ptr const& data, bool isAck, message::list & ack_resp) {
-        _lock.lock(); //Bloquear la ejecucion hasta realizar una opcion
-        std::cout << "Llego unos dato" << std::endl;
-
-        _lock.unlock(); //Desbloquear la ejecucion para seguir con el programa
-    }));
-    current_socket->on("imagen", sio::socket::event_listener_aux([&](string
-            const& name, message::ptr const& data, bool isAck, message::list & ack_resp) {
-
-        _lock.lock(); //Bloquear la ejecucion hasta realizar una opcion
-        std::cout << "Llego una imagen" << std::endl;
-        _lock.unlock(); //Desbloquear la ejecucion para seguir con el programa
-    }));
-
-
-    current_socket->on("nuevousuario", sio::socket::event_listener_aux([&](string
-            const& name, message::ptr const& data, bool isAck, message::list & ack_resp) {
-        _lock.lock(); //Bloquear la ejecucion hasta realizar una opcion
-        std::vector<std::shared_ptr < message>> vectoringresojson = data -> get_vector(); //Creo vector para el ingreso de datos
-        std::cout << "Inicializando Nuevo Usuario" << std::endl;
-
-        _lock.unlock(); //Desbloquear la ejecucion para seguir con el programa
-    }));
-}
 
 std::string GetLocalTime() {
     auto now(std::chrono::system_clock::now());
@@ -228,8 +202,6 @@ int main(int argc, const char* args[]) {
     array_message::ptr mensajetotal(sio::array_message::create()); //Crear un array de objetos, para enviar varios datos a la vez
     std::vector<std::shared_ptr < sio::message>> &vectortotal = mensajetotal->get_vector(); //Variable estandar con puntero al anterior objeto array_message
 
-    eventos(); //mandar a llamar una vez, obligatorio
-
     std::cout << "Prueba 100 valores" << std::endl;
     HIGHLIGHT("Manual: Ponga el identificador seguido del valor, ejemplo:");
     EM(" motor,255; estado, 0; presencia,0; clasificador,0; Valores permitidos:motor(0-255), clasificador(0,1), presencia(1,0), led(1,0), imagen ,ruta/a/imagen.gif;");
@@ -323,7 +295,8 @@ int main(int argc, const char* args[]) {
             _lock.unlock();
         }
         contadorparcial += 1;
-        datosalida != datosalida;
+        if(datosalida) datosalida = false;
+        else datosalida = true;
     }
     h.close(); //Cerrar servidor
     cout << "Finalización programa" << endl;
