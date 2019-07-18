@@ -782,7 +782,8 @@ socket.on('latenciaentrada', function (data) {
     console.log("Dato latencia entrada");
     console.log(data);
     jsonfechaentrada.fechacliente = new Date();
-    dato.latencia = Math.abs(jsonfechaentrada.fechacliente.getTime() - jsonfechaentrada.fechaservidor.getTime())
+    var fechaserver = new Date(dato.fechaservidor);
+    dato.latencia = Math.abs(jsonfechaentrada.fechacliente.getTime() - fechaserver.getTime())
     latenciaentrada.innerHTML = dato.latencia;
     jsonfechaentrada = {};
     jsonfechaentrada.fechaservidor = dato.fechaservidor;
