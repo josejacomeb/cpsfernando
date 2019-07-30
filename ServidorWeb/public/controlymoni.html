@@ -7,7 +7,7 @@
         <meta name="description" content="Trabajo Final de Máster en Sistemas Automáticos y Electrónica Industrial">
         <meta name="keywords" content="Ciberfísicos, IOT, Visión Artifical, Control de Calidad">
         <meta name="author" content="Fernando Jácome">
-        <title> SECVIA | CONTROL Y MONITORIZACIÓN</title>
+        <title> SECVIA | CONTROL AND MONITORING</title>
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="shortcut icon" href="/images/iot.png">
     </head>
@@ -16,15 +16,14 @@
         <header> 
             <div class="container">
                 <div id="branding">
-                    <h1> <span class="highlight">  CONTROL Y MONITORIZACIÓN DE UN SISTEMA FISÍCO DESDE LA RED </span> </h1>
-                    <h2> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h2>
-                    <h3> SISTEMA DE CLASIFICACIÓN DE ENGRANAJES CON VISIÓN ARTIFICIAL </h3>
+                    <h2> <span class="highlight">  CONTROL AND MONITORING OF A CYBERPHYSICAL SYSTEM FROM A NETWORK </span> </h2>
+                    <h3> Una introducción interactiva a un Sistema Ciber-físico (CPS)</h3>
+                    <h4> SISTEMA DE CLASIFICACIÓN DE ENGRANAJES CON VISIÓN ARTIFICIAL </h4>
                 </div>
                 <nav>
                     <ul>
                         <li> <a href="inicio.html" > INICIO</a></li>
                         <li class ="current" > <a href="controlymoni.html" > CONTROL Y MONITORIZACIÓN </a></li>
-                        <!-- <li > <a href="practicas.html" >DISPOSITIVO 2</a></li> -->
                         <li > <a href="historial.html" > HISTORIAL</a></li>
                         <li> <a href="estadisticas.html" > ESTADISTICAS </a> </li>
                         <li> <a href="docs.html"> DOCUMENTACIÓN</a></li>
@@ -39,8 +38,8 @@
             </div>
         </section>
         <!-- SECCION 2 COMANDOS DE CALIBRACION -->
-        <section id ="showcase2" style="background-color:  #268982" style="margin-left: 20px" style="margin-right: 20px">
-            <table id="tablacomandos"style="width:80%">
+        <section id ="showcase3" style="background-color:  #268982;margin-left:20px;margin-right: 20px">
+            <table id="tablacomandos1" style="width:80%">
                 <tr>
                     <td colspan="1">
                         <h2>CALIBRACION DE SENSOR DE POSICIÓN</h2>  
@@ -51,12 +50,12 @@
                 </tr>
                 <tr>
                     <td style="background-color:  #268982"> 
-                        <div class ="container" style="font-weight: bold" style="font-size-adjust: 10px">
+                        <div class ="container" style="font-weight: bold; font-size-adjust: 10px">
                             <form>
-                                <p>  Valor de Umbral </p>
+                                <span>  Valor de Umbral: </span>
                                 <input id="umbral" type="range" name="sliderumbral" min="10" max="800" value="20">  
                             </form>  
-                            <label id="umbralvalor" style="font-size: 15px" style="text-align: center" style="color: #000000"> </label>
+                            <label id="umbralvalor" style="font-size: 15px; text-align: center; color: #000000"> </label>
                             <p id="datocalibrar" style="display:none" > CALIBRADO </p> 
                         </div>
                     </td>
@@ -167,7 +166,7 @@
                             </td>
                             <td> 
                                 <p> VELOCIDAD DEL MOTOR </p>
-                                <label id="motorvalor" style="font-size:15px" style="text-align: center" style="color: #000000"> </label>
+                                <label id="motorvalor" style="font-size:15px; text-align: center; color: #000000"> </label>
                             </td>
                         </tr>
                         <tr>
